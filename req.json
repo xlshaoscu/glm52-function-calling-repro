@@ -1,0 +1,46 @@
+{
+  "model": "GLM-5.2",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a helpful assistant with access to tools. Use tools when appropriate to complete user tasks."
+    },
+    {
+      "role": "user",
+      "content": "帮我做下测试，你自己随机生成10个agent的常规任务，创建10个agent并发运行，最终返回下效果数据，或者你网上找找测试的工具也可以"
+    }
+  ],
+  "tools": [
+    {"type": "function", "function": {"name": "browser_back", "description": "Navigate back to the previous page in browser history."}},
+    {"type": "function", "function": {"name": "browser_click", "description": "Click on an element identified by its ref ID."}},
+    {"type": "function", "function": {"name": "browser_console", "description": "Get browser console output and JavaScript errors."}},
+    {"type": "function", "function": {"name": "browser_get_images", "description": "Get all images on the current page with URLs and alt text."}},
+    {"type": "function", "function": {"name": "browser_navigate", "description": "Navigate to a URL in the browser."}},
+    {"type": "function", "function": {"name": "browser_press", "description": "Press a keyboard key."}},
+    {"type": "function", "function": {"name": "browser_scroll", "description": "Scroll the page in a direction."}},
+    {"type": "function", "function": {"name": "browser_snapshot", "description": "Get text-based snapshot of the page accessibility tree."}},
+    {"type": "function", "function": {"name": "browser_type", "description": "Type text into an input field identified by ref ID."}},
+    {"type": "function", "function": {"name": "browser_vision", "description": "Take a screenshot of the current page."}},
+    {"type": "function", "function": {"name": "clarify", "description": "Ask the user a question when clarification is needed."}},
+    {"type": "function", "function": {"name": "cronjob", "description": "Manage scheduled cron jobs."}},
+    {"type": "function", "function": {"name": "delegate_task", "description": "Spawn subagents to work on tasks in isolated contexts."}},
+    {"type": "function", "function": {"name": "execute_code", "description": "Run a Python script that can call tools programmatically."}},
+    {"type": "function", "function": {"name": "memory", "description": "Save durable facts to persistent memory."}},
+    {"type": "function", "function": {"name": "patch", "description": "Targeted find-and-replace edits in files."}},
+    {"type": "function", "function": {"name": "process", "description": "Manage background processes."}},
+    {"type": "function", "function": {"name": "read_file", "description": "Read a text file with line numbers."}},
+    {"type": "function", "function": {"name": "search_files", "description": "Search file contents or find files by name."}},
+    {"type": "function", "function": {"name": "session_search", "description": "Search past sessions stored in local session DB."}},
+    {"type": "function", "function": {"name": "skill_manage", "description": "Manage skills (create, update, delete)."}},
+    {"type": "function", "function": {"name": "skill_view", "description": "Load information about specific tasks and workflows."}},
+    {"type": "function", "function": {"name": "skills_list", "description": "List available skills (name + description)."}},
+    {"type": "function", "function": {"name": "terminal", "description": "Execute shell commands on a Linux environment."}},
+    {"type": "function", "function": {"name": "text_to_speech", "description": "Convert text to speech audio."}},
+    {"type": "function", "function": {"name": "todo", "description": "Manage task list for the current session."}},
+    {"type": "function", "function": {"name": "vision_analyze", "description": "Load an image into the conversation."}},
+    {"type": "function", "function": {"name": "write_file", "description": "Write content to a file."}}
+  ],
+  "max_tokens": 65536,
+  "chat_template_kwargs": {"enable_thinking": false},
+  "stream": false
+}
